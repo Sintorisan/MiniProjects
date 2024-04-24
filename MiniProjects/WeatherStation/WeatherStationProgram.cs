@@ -6,7 +6,7 @@ public class WeatherStationProgram
 {
     private readonly TempDb _db = new TempDb();
     bool runProgram = true;
-    public void StartWeatherStation()
+    public void StartWeatherStationProgram()
     {
         while (runProgram)
         {

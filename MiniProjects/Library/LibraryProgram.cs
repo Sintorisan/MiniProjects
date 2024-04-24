@@ -6,7 +6,7 @@ public class LibraryProgram
 {
     private readonly LibraryDb _db = new LibraryDb();
     bool runProgram = true;
-    public void StartLibrary()
+    public void StartLibraryProgram()
     {
         while (runProgram)
         {

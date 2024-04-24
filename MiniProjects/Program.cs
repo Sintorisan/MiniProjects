@@ -1,10 +1,12 @@
 ﻿using MiniProjects.Library;
+using MiniProjects.ProductPricingCalculator;
 using MiniProjects.WeatherStation;
 
 LibraryProgram libraryProgram = new LibraryProgram();
 WeatherStationProgram weatherStationProgram = new WeatherStationProgram();
+ProductPricingProgram productPricingProgram = new ProductPricingProgram();
 
-List<string> projects = new List<string> { "Library Management System", "Weather Station" };
+List<string> projects = new List<string> { "Library Management System", "Weather Station", "Product Pricing Calculator" };
 
 while (true)
 {
@@ -12,7 +14,7 @@ while (true)
 
     for (int i = 0; i < projects.Count; i++)
     {
-        Console.WriteLine($"{i + 1}) {projects[i]}");
+        Console.WriteLine($"{i + 1}) {projects[i]} \n");
     }
 
     Console.Write("Choose the project you want to open: ");
@@ -22,10 +24,13 @@ while (true)
     switch (projectNumber)
     {
         case 1:
-            libraryProgram.StartLibrary();
+            libraryProgram.StartLibraryProgram();
             break;
         case 2:
-            weatherStationProgram.StartWeatherStation();
+            weatherStationProgram.StartWeatherStationProgram();
+            break;
+        case 3:
+            productPricingProgram.StartProductPricingProgram();
             break;
         default:
             Console.WriteLine("Invalid Choice");
